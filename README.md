@@ -32,6 +32,7 @@ Takes `type`, `name`, `message`, `tree`, [`filter`, `validate`, `transformer`, `
 The extra options that this plugin provides are:
 
 - `tree`: (Array) list of tree items or (optionally asynchronous) function to obtain them; items are strings or objects with:
+
   - `name`: (String) to display in list; must provide this or `value`
   - `value`: (String) to put in answers hash; must provide this or `name`
   - `short`: (String) to display after selection
@@ -49,8 +50,8 @@ The extra options that this plugin provides are:
 ### Example
 
 ```
-const inquirer = require('inquirer');
-const TreePrompt = require('inquirer-tree-prompt');
+import inquirer from 'inquirer';
+import TreePrompt from 'inquirer-tree-prompt';
 
 inquirer.registerPrompt('tree', TreePrompt);
 
